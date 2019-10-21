@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.BuyBook.mapper.BuyBookMapper">
+    <!-- fangfa1 -->
+    <select id="selectPersonById" parameterType="int" resultType="person">
+  	select * from person where id=#{id}
+    </select>
+
+    <!-- fangfa2 -->
+    <update id="updatePersonByPerson" parameterType="person">
+  	update person set balance=#{balance} where id=#{id}
+    </update>
+
+    <!-- fangfa3 -->
+    <select id="selectBookStoreById" parameterType="int" resultType="BookStore">
+  	select * from bookstore where id=#{id}
+    </select>
+
+    <!-- fangfa4 -->
+    <update id="updateBookStoreByBookStore" parameterType="BookStore" >
+  	update bookstore set bookNum=#{bookNum} where id=#{id}
+    </update>
+
+</mapper>
